@@ -45,6 +45,13 @@ const testdata = [
     
 ];
 
+console.log('futuriceby: -> '+fromto.to('futuriceby'));
+console.log('futurice: -> '+fromto.to('futurice'));
+
+console.log('futurijoki: -> '+fromto.to('futurijoki'));
+console.log('mäntyharju: -> '+fromto.to('mäntyharju'));
+console.log('isovuori '+fromto.to('isovuori'));
+
 testdata.map(function (item) {
     describe(`*** ${item[0]} ***`, function() {
         it(`From should be ${item[1]}`, function() {

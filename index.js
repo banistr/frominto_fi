@@ -58,7 +58,7 @@ const ruleset = [
     [['kesälahti', 'talvilahti'], -2, 'delta', 'della', 'delle'],
 
     //vuoret + erikoisvuoret
-    [['vuori'], -1, 'elle', 'ella', 'elta'],
+    [['vuori'], -1, 'elta', 'ella', 'elle'],
     [['laajavuori'], -1, 'esta', 'essa', 'een'],
     //joet
     [['joki'], -4, 'joelta', 'joella', 'joelle' ],
