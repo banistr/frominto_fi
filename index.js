@@ -37,7 +37,7 @@ const ruleset = [
     [['pere'], 0 , 'elta', 'ella' , 'elle'],
     [['pele'], 0 , 'eltä', 'ellä' , 'elle'],
 
-    [['rku'], -2 , 'usta', 'ussa' , 'kuun'],
+    [['rku', 'kku'], -2 , 'usta', 'ussa' , 'kuun'],
     //ii, aa - päätteiset, kuten Ii, laukaa, vantaa, espoo
     [['ee'], 0, 'ltä', 'llä', 'lle'],
     [['ii'], 0, 'stä', 'ssä', 'hin'],
@@ -73,7 +73,7 @@ const ruleset = [
     [['asema'], 0, 'lta', 'lla', 'lle'],  
 
     //-etti, tough one (taavetti, retretti)
-    [['vetti'], -2, 'ista', 'issa', 'tiin'],  
+    [['tti'], -2, 'ista', 'issa', 'tiin'],  
     [['retti'], -2, 'istä', 'issä', 'tiin'],  
 
 ];
