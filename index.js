@@ -14,8 +14,8 @@ const ruleset = [
     [['ö'], 0 , 'stä', 'ssä' , 'ön'],
 
     //-ri -erityiset: pori, meri etc.
-    [['ori'], 0, 'sta', 'ssa', 'in'],
-    [['eri'], -1, 'essä', 'estä', 'ereen'],
+    [['pori'], 0, 'sta', 'ssa', 'in'],
+    [['meri','veri'], -1, 'essä', 'estä', 'ereen'],
         
     
     //xxby, like Degerby
