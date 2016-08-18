@@ -43,6 +43,8 @@ const testdata = [
     ['Palokka', 'Palokasta', 'Palokassa', 'Palokkaan'],
     ['Ristonmaa', 'Ristonmaalta', 'Ristonmaalla', 'Ristonmaalle'],
     ['Niipperi', 'Niipperistä', 'Niipperissä', 'Niipperiin'],
+    ['Lepsämä', 'Lepsämästä', 'Lepsämässä', 'Lepsämään'],
+    ['Toivakka', 'Toivakasta', 'Toivakassa', 'Toivakkaan'],
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
 ];
 

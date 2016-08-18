@@ -25,6 +25,7 @@ const ruleset = [
     [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in'],
     // -kka
     [['kka'], -2, 'asta', 'assa', 'kaan'],
+    [['kkä'], -2, 'ästä', 'ässä', 'kään'],
     //-nta, esim. maalaiskunta, lappeenranta
     [['nta'], -2 , 'nasta', 'nassa' , 'taan'],
 
@@ -55,7 +56,7 @@ const ruleset = [
     [['saari'], -1, 'esta', 'essa', 'een' ],
     
     //lahdet + erikoislahdet
-    [['lahti'], -1, 'een', 'essa', 'esta'],
+    [['lahti'], -1, 'esta', 'essa', 'een'],
     [['kesälahti', 'talvilahti'], -2, 'delta', 'della', 'delle'],
 
     //vuoret + erikoisvuoret
