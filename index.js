@@ -73,28 +73,20 @@ const ruleset = [
 ];
 
 function getLatestMatch(city){
-    const matches = ruleset.map(function(rule){
-        //these are this way to make the ruleset table more readable
-        const endings = rule[0];
-        const offset = rule[1];
-        const _from = rule[2];
-        const _in = rule[3];
-        const _to = rule[4];
-        const match = endings.filter(function (ending) {
-            return (city.toUpperCase().endsWith(ending.toUpperCase()));
-        }).length > 0;
-        if (match) {
-            return {
-                        from: city.slice(0,city.length + offset)+_from, 
-                        in: city.slice(0,city.length + offset)+_in, 
-                        to: city.slice(0,city.length + offset)+_to
-                    };
-        }
-    }).filter((item) => (item !== undefined));
-    //return the last one
-    if (matches.length > 0) return matches.pop();
-    //if no match, passtrough the original
-    return {from: city, in: city, to: city};
+  
+  const matches = 
+    ruleset
+      .filter(rule => (
+        rule[0].filter((ending) => 
+          (city.toUpperCase().endsWith(ending.toUpperCase()))
+        ).length))
+      .map((match) => ({
+                         from: city.slice(0,city.length + match[1])+match[2],
+                         in: city.slice(0,city.length + match[1])+match[3], 
+                         to: city.slice(0,city.length + match[1])+match[4],
+                        }));
+
+    return matches.length ? matches.pop() : {from: city, in: city, to: city};
 }
 
 module.exports = {
