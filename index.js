@@ -72,7 +72,7 @@ const ruleset = [
 
 ];
 
-function getLatestMatch(city){
+function getLastMatch(city){
   
   const matches = 
     ruleset
@@ -91,13 +91,13 @@ function getLatestMatch(city){
 
 module.exports = {
     from: function(city) {
-        return getLatestMatch(city).from;
+        return getLastMatch(city).from;
     },
     in: function(city) {
-        return getLatestMatch(city).in;
+        return getLastMatch(city).in;
         
     },
     to: function(city) {
-        return getLatestMatch(city).to;
+        return getLastMatch(city).to;
     },
 };
