@@ -23,7 +23,8 @@ const ruleset = [
 
     //naantali et al
     [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in'],
-
+    // -kka
+    [['kka'], -2, 'asta', 'assa', 'kaan'],
     //-nta, esim. maalaiskunta, lappeenranta
     [['nta'], -2 , 'nasta', 'nassa' , 'taan'],
 

@@ -40,17 +40,11 @@ const testdata = [
     ['Vaasa', 'Vaasasta', 'Vaasassa', 'Vaasaan'],
     ['Jaala', 'Jaalasta', 'Jaalassa', 'Jaalaan'],
     ['Laajavuori', 'Laajavuoresta', 'Laajavuoressa', 'Laajavuoreen'],
+    ['Palokka', 'Palokasta', 'Palokassa', 'Palokkaan'],
+    ['Ristonmaa', 'Ristonmaalta', 'Ristonmaalla', 'Ristonmaalle'],
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
-    
-    
 ];
 
-console.log('futuriceby: -> '+fromto.to('futuriceby'));
-console.log('futurice: -> '+fromto.to('futurice'));
-
-console.log('futurijoki: -> '+fromto.to('futurijoki'));
-console.log('mäntyharju: -> '+fromto.to('mäntyharju'));
-console.log('isovuori '+fromto.to('isovuori'));
 
 testdata.map(function (item) {
     describe(`*** ${item[0]} ***`, function() {
