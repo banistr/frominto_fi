@@ -1,6 +1,6 @@
 # frominto_fi
 
-Finnish language is hard. We come from "Mäntyharju_lta_" or "Hiekkaharju_sta_". We spend our time "Lahde_ssa_" or "Kesälahde_lla_". This is a first trial make things better. better digital services in progress to help with at least the common cities/places.
+Finnish language is hard. We come from "Mäntyharju_lta_" or "Hiekkaharju_sta_". We spend our time "Lahde_ssa_" or "Kesälahde_lla_". This is a first trial make things better and to help with at least the common cities/places.
 
 ## Howto
 `npm run test`
