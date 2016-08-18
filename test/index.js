@@ -29,6 +29,15 @@ const testdata = [
     ['Laukaa', 'Laukaasta', 'Laukaassa', 'Laukaaseen'],
     ['Turku', 'Turusta', 'Turussa', 'Turkuun'],
     ['Pertunmaa', 'Pertunmaalta', 'Pertunmaalla', 'Pertunmaalle'],
+    ['Espoo', 'Espoosta', 'Espoossa', 'Espooseen'],
+    ['Vantaa', 'Vantaalta', 'Vantaalla', 'Vantaalle'],
+    ['Kuopio', 'Kuopiosta', 'Kuopiossa', 'Kuopioon'],
+    ['Kouvola', 'Kouvolasta', 'Kouvolassa', 'Kouvolaan'],
+    ['Pori', 'Porista', 'Porissa', 'Poriin'],
+    ['Joensuu', 'Joensuusta', 'Joensuussa', 'Joensuuhun'],
+    ['Lappeenranta', 'Lappeenrannasta', 'Lappeenrannassa', 'Lappeenrantaan'],
+    ['Hämeenlinna', 'Hämeenlinnasta', 'Hämeenlinnassa', 'Hämeenlinnaan'],
+    ['Vaasa', 'Vaasasta', 'Vaasassa', 'Vaasaan'],
     
     
 ];

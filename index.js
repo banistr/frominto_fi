@@ -12,6 +12,11 @@ const ruleset = [
     [['y'], 0 , 'stä', 'ssä' , 'yn'],
     [['ä'], 0 , 'stä', 'ssä' , 'än'],
     [['ö'], 0 , 'stä', 'ssä' , 'ön'],
+
+    //-ri -erityiset: pori, meri etc.
+    [['ori'], 0, 'sta', 'ssa', 'in'],
+    [['eri'], -1, 'essä', 'estä', 'ereen'],
+        
     
     //xxby, like Degerby
     [['by'], 0 , 'stä', 'ssä' , 'hyn'],
@@ -19,10 +24,10 @@ const ruleset = [
     //naantali et al
     [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in'],
 
-    //-kunta, esim. maalaiskunta
+    //-nta, esim. maalaiskunta, lappeenranta
     [['nta'], -2 , 'nasta', 'nassa' , 'taan'],
 
-    //astevaihteluita helsinki, hanko etc.
+    // helsinki, hanko, nta, nki etc.
     [['nki'], -3 , 'ngistä', 'ngissä' , 'nkiin'],
     [['nko'], -3 , 'ngosta', 'ngossa' , 'nkoon'],
 
@@ -31,10 +36,11 @@ const ruleset = [
     [['pele'], 0 , 'eltä', 'ellä' , 'elle'],
 
     [['rku'], -2 , 'usta', 'ussa' , 'kuun'],
-    //ii, aa - päätteiset, kuten Ii tai laukaa
+    //ii, aa - päätteiset, kuten Ii, laukaa, vantaa, espoo
     [['ii'], 0, 'stä', 'ssä', 'hin'],
-    [['aa'], 0, 'sta', 'ssa', 'seen'],
-    [['maa'], 0, 'lta', 'lla', 'lle'],
+    [['uu'], 0, 'sta', 'ssa', 'hun'],
+    [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
+    [['maa', 'taa'], 0, 'lta', 'lla', 'lle'],
 
     //inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
     [['inen'], -4, 'isista', 'isissa', 'isiin' ],
