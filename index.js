@@ -39,6 +39,7 @@ const ruleset = [
 
     [['rku'], -2 , 'usta', 'ussa' , 'kuun'],
     //ii, aa - päätteiset, kuten Ii, laukaa, vantaa, espoo
+    [['ee'], 0, 'ltä', 'llä', 'lle'],
     [['ii'], 0, 'stä', 'ssä', 'hin'],
     [['uu'], 0, 'sta', 'ssa', 'hun'],
     [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
@@ -56,7 +57,7 @@ const ruleset = [
     [['saari'], -1, 'esta', 'essa', 'een' ],
     
     //lahdet + erikoislahdet
-    [['lahti'], -1, 'esta', 'essa', 'een'],
+    [['lahti'], -2, 'desta', 'dessa', 'teen'],
     [['kesälahti', 'talvilahti'], -2, 'delta', 'della', 'delle'],
 
     //vuoret + erikoisvuoret
