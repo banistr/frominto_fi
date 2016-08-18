@@ -57,6 +57,9 @@ const ruleset = [
     [['lahti'], -1, 'een', 'essa', 'esta'],
     [['kesälahti', 'talvilahti'], -2, 'delta', 'della', 'delle'],
 
+    //vuoret + erikoisvuoret
+    [['vuori'], -1, 'elle', 'ella', 'elta'],
+    [['laajavuori'], -1, 'esta', 'essa', 'een'],
     //joet
     [['joki'], -4, 'joelta', 'joella', 'joelle' ],
     
@@ -84,7 +87,6 @@ function getLastMatch(city) {
                          in: city.slice(0,city.length + match[1]) + match[3],
                          to: city.slice(0,city.length + match[1]) + match[4],
                         }));
-
   return matches.length ? matches.pop() : {from: city, in: city, to: city};
 }
 
@@ -94,7 +96,6 @@ module.exports = {
     },
     in: function(city) {
         return getLastMatch(city).in;
-        
     },
     to: function(city) {
         return getLastMatch(city).to;
