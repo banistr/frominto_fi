@@ -16,6 +16,9 @@ const ruleset = [
     //xxby, like Degerby
     [['by'], 0 , 'stä', 'ssä' , 'hyn'],
 
+    //naantali et al
+    [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in'],
+
     //-kunta, esim. maalaiskunta
     [['nta'], -2 , 'nasta', 'nassa' , 'taan'],
 
@@ -56,6 +59,11 @@ const ruleset = [
     
     //asemat
     [['asema'], 0, 'lta', 'lla', 'lle'],  
+
+    //-etti, tough one (taavetti, retretti)
+    [['vetti'], -2, 'ista', 'issa', 'tiin'],  
+    [['retti'], -2, 'istä', 'issä', 'tiin'],  
+
 ];
 
 function getLatestMatch(city){
