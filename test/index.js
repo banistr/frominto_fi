@@ -38,6 +38,7 @@ const testdata = [
     ['Lappeenranta', 'Lappeenrannasta', 'Lappeenrannassa', 'Lappeenrantaan'],
     ['Hämeenlinna', 'Hämeenlinnasta', 'Hämeenlinnassa', 'Hämeenlinnaan'],
     ['Vaasa', 'Vaasasta', 'Vaasassa', 'Vaasaan'],
+    ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
     
     
 ];

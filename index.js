@@ -94,7 +94,7 @@ function getLatestMatch(city){
     //return the last one
     if (matches.length > 0) return matches.pop();
     //if no match, passtrough the original
-    return city;
+    return {from: city, in: city, to: city};
 }
 
 module.exports = {
