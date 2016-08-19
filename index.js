@@ -90,8 +90,7 @@ const ruleset = [
 ];
 
 function getLastMatch(city) {
-  const matches =
-    ruleset
+  return ruleset
       .filter(rule => (
         rule[0].filter((ending) => 
           (city.toUpperCase().endsWith(ending.toUpperCase()))
@@ -100,8 +99,8 @@ function getLastMatch(city) {
                          from: city.slice(0,city.length + match[1]) + match[2],
                          in: city.slice(0,city.length + match[1]) + match[3],
                          to: city.slice(0,city.length + match[1]) + match[4],
-                        }));
-  return matches.length ? matches.pop() : {from: city, in: city, to: city};
+                        }))
+      .pop() || {from: city, in: city, to: city};
 }
 
 module.exports = {
