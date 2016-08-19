@@ -14,10 +14,10 @@ const ruleset = [
     [['ö'], 0 , 'stä', 'ssä' , 'ön'],
 
     //-ri -erityiset: pori, meri etc.
-    [['pori'], 0, 'sta', 'ssa', 'in'],
+    [['pori', 'uri', 'ari'], 0, 'sta', 'ssa', 'in'],
     [['meri','veri'], -1, 'essä', 'estä', 'ereen'],
         
-    
+    [['as', 'es'], -1, 'ksesta', 'ksessa', 'kseen'],
     //xxby, like Degerby
     [['by'], 0 , 'stä', 'ssä' , 'hyn'],
 
@@ -43,15 +43,25 @@ const ruleset = [
     [['ii'], 0, 'stä', 'ssä', 'hin'],
     [['uu'], 0, 'sta', 'ssa', 'hun'],
     [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
-    [['maa', 'taa'], 0, 'lta', 'lla', 'lle'],
+    [['maa', 'taa', 'ria', 'pua', 'uma'], 0, 'lta', 'lla', 'lle'],
+
+    [['iä'], 0, 'ltä', 'llä', 'lle'],
 
     //inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
     [['inen'], -4, 'isista', 'isissa', 'isiin' ],
     [['äinen', 'öinen'], -4, 'isistä', 'isissä', 'isiin' ],
+    [['Joroinen'], -4, 'isilta', 'isilla', 'isille' ],
 
     //harjut + erikoisharjut
     [['harju'], 0, 'lta', 'lla', 'lle' ],
     [['hiekkaharju'], 0, 'sta', 'ssa', 'un' ],
+
+    [['nummi'], -1, 'elta', 'ella', 'elle' ],
+    [['järvi'], -1, 'eltä', 'ellä', 'elle' ],
+
+    //kosket ja salmet
+    [['koski', 'salmi'], -1, 'elta', 'ella', 'elle' ],
+    [['ore'], 0, 'elta', 'ella', 'elle' ],
 
     //saaret + erikoissaaret
     [['saari'], -1, 'esta', 'essa', 'een' ],
@@ -74,7 +84,8 @@ const ruleset = [
 
     //-etti, tough one (taavetti, retretti)
     [['tti'], -2, 'ista', 'issa', 'tiin'],  
-    [['retti'], -2, 'istä', 'issä', 'tiin'],  
+    [['kki'], -2, 'ista', 'issa', 'kiin'],  
+    [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin'],  
 
 ];
 
