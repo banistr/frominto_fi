@@ -12,9 +12,9 @@ const ruleset = [
     [['y'], 0 , 'stä', 'ssä' , 'yn'],
     [['ä'], 0 , 'stä', 'ssä' , 'än'],
     [['ö'], 0 , 'stä', 'ssä' , 'ön'],
-    
-    //-ri -erityiset: pori, meri etc. + kajaani yms
-    [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in'],
+
+    //-ri -erityiset: pori, meri etc.
+    [['pori', 'uri', 'ari'], 0, 'sta', 'ssa', 'in'],
     [['meri','veri'], -1, 'essä', 'estä', 'ereen'],
         
     [['as', 'es'], -1, 'ksesta', 'ksessa', 'kseen'],

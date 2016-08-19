@@ -64,7 +64,6 @@ const testdata = [
     ['Ruukki', 'Ruukista', 'Ruukissa', 'Ruukkiin'],
     ['Rauma', 'Raumalta', 'Raumalla', 'Raumalle'],
     ['Lapua', 'Lapualta', 'Lapualla', 'Lapualle'],
-    ['Kajaani', 'Kajaanista', 'Kajaanissa', 'Kajaaniin'],
     
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
 ];

@@ -1,0 +1,15 @@
+{
+  "name": "frominto_fi",
+  "version": "0.1.1",
+  "description": "This module implements 3 functions: from, in and to, returning the appropriate and correct forms in Finnish for the given city/place",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test/index.js"
+  },
+  "author": "Antti Kosonen <antti.kosonen@futurice.com> (http://spiceprogram.org)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
