@@ -78,6 +78,8 @@ const ruleset = [
     
     //mäet
     [['mäki'], -4, 'mäeltä', 'mäellä', 'mäelle' ],
+    //erikoismäet
+    [['kannelmäki'], -2, 'estä', 'essä', 'keen' ],
     
     //asemat
     [['asema'], 0, 'lta', 'lla', 'lle'],  
