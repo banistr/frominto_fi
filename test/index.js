@@ -67,6 +67,7 @@ const testdata = [
     ['Kajaani', 'Kajaanista', 'Kajaanissa', 'Kajaaniin'],
     ['Kannelmäki', 'Kannelmäestä', 'Kannelmäessä', 'Kannelmäkeen'],
     ['Kangasala', 'Kangasalta', 'Kangasalla', 'Kangasalle'],
+    ['Punavuori', 'Punavuoresta', 'Punavuoressa', 'Punavuoreen'],
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
 ];
 

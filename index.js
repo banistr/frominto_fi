@@ -72,7 +72,7 @@ const ruleset = [
 
     //vuoret + erikoisvuoret
     [['vuori'], -1, 'elta', 'ella', 'elle'],
-    [['laajavuori'], -1, 'esta', 'essa', 'een'],
+    [['laajavuori', 'punavuori'], -1, 'esta', 'essa', 'een'],
     //joet
     [['joki'], -4, 'joelta', 'joella', 'joelle' ],
     
