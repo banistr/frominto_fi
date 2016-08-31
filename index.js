@@ -89,6 +89,9 @@ const ruleset = [
     [['kki'], -2, 'ista', 'issa', 'kiin'],  
     [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin'],  
 
+    // totally weird cases
+    [['Kangasala'], -3, 'alta', 'alla', 'alle'],
+
 ];
 
 function getLastMatch(city) {
