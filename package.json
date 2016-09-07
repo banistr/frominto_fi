@@ -1,6 +1,6 @@
 {
   "name": "frominto_fi",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "This module implements 3 functions: from, in and to, returning the appropriate and correct forms in Finnish for the given city/place",
   "main": "index.js",
   "scripts": {
