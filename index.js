@@ -16,6 +16,7 @@ const ruleset = [
     //-ri -erityiset: pori, meri etc. + kajaani yms
     [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in'],
     [['meri','veri'], -1, 'essä', 'estä', 'ereen'],
+
         
     [['as', 'es'], -1, 'ksesta', 'ksessa', 'kseen'],
     //xxby, like Degerby
@@ -23,6 +24,9 @@ const ruleset = [
 
     //naantali et al
     [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in'],
+    
+    //-he, like Raahe
+    [['he'], 0, 'sta', 'ssa', 'en'],
     // -kka
     [['kka'], -2, 'asta', 'assa', 'kaan'],
     [['kkä'], -2, 'ästä', 'ässä', 'kään'],
@@ -43,7 +47,7 @@ const ruleset = [
     [['ii'], 0, 'stä', 'ssä', 'hin'],
     [['uu'], 0, 'sta', 'ssa', 'hun'],
     [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
-    [['maa', 'taa', 'ria', 'pua', 'uma'], 0, 'lta', 'lla', 'lle'],
+    [['maa', 'taa', 'ria', 'pua', 'uma', 'tra'], 0, 'lta', 'lla', 'lle'],
 
     [['iä'], 0, 'ltä', 'llä', 'lle'],
 
