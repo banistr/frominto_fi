@@ -71,6 +71,38 @@ const testdata = [
     ['Imatra', 'Imatralta', 'Imatralla', 'Imatralle'],
     ['Sumatra', 'Sumatralta', 'Sumatralla', 'Sumatralle'],
     ['Raahe', 'Raahesta', 'Raahessa', 'Raaheen'],
+    ['Uimaharju', ,'Uimaharjusta', 'Uimaharjussa', 'Uimaharjuun'], // src: http://www.uimaharju.fi/
+    ['Hyvinkää', 'Hyvinkäältä', 'Hyvinkäällä', 'Hyvinkäälle'],
+    ['Luosto', 'Luostolta', 'Luostolla', 'Luostolle'], // luosto.fi
+    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
+    ['Raahe', 'Raahesta', 'Raahessa', 'Raaheen'], // luosto.fi
+    ['Ruka', 'Rukalta', 'Rukalla', 'Rukalle'], 
+    ['Pyhä', 'Pyhältä', 'Pyhällä', 'Pyhälle'], 
+    ['Kiuruvesi', 'Kiuruvedeltä', 'Kiuruvedellä', 'Kiruvedelle'], 
+    ['Karjaa', 'Karjaalta', 'Karjaalla', 'Karjaalle'], // www.raasepori.fi 
+    ['Pukinmäki', 'Pukinmäestä', 'Pukinmäessä', 'Pukinmäkeen'], // www.raasepori.fi 
+    ['Dragsvik', 'Dragsvikistä', 'Dragsvikissä', 'Dragsvikiin'], // https://fi.wikipedia.org/wiki/Uudenmaan_prikaati 
+    ['Runni', 'Runnista', 'Runnissa', 'Runniin'], 
+    ['Keuruu', 'Keuruulta', 'Keuruulla', 'Keuruulle'],
+    ['Pihlajavesi', 'Pihlajavedeltä', 'Pihjalavedellä', 'Pihlajavedelle'],
+    ['Saariselkä', 'Saariselältä', 'Saariselällä', 'Saariselälle'],
+    ['Harjavalta', 'Harjavallasta', 'Harjavallassa', 'Harjavaltaan'],
+    ['Kiilopää', 'Kiilopäältä', 'Kiilopäällä', 'Kiilopäälle'],
+    ['Tahko', 'Tahkolta', 'Tahkolla', 'Tahkolle'],
+    ['Suomu', 'Suomulta', 'Suomulla', 'Suomulle'],
+    ['Malmi', 'Malmilta', 'Malmilla', 'Malmille'],
+    ['Lapinlahti', 'Lapinlahdelta', 'Lapinlahdella', 'Lapinlahdelle'],
+    ['Kauhava', 'Kauhavalta', 'Kauhavalla', 'Kauhavalle'],
+    ['Kerava', 'Keravalta', 'Keravalla', 'Keravalle'],
+    ['Orivesi', 'Orivedeltä', 'Orivedellä', 'Orivedelle'],
+    ['Muhos', 'Muhokselta', 'Muhokselta', 'Muhokselle'],
+    ['Kannus', 'Kannuksesta', 'Kannuksessa', 'Kannukseen'],
+    ['Varkaus', 'Varkaudesta', 'Varkaudessa', 'Varkauteen'],
+    ['Koivuhovi', 'Koivuhovista', 'Koivuhovissa', 'Koivuhoviin'],
+    ['Nokia', 'Nokialta', 'Nokialla', 'Nokialle'],
+    ['Vihanti', 'Vihantista', 'Vihantissa', 'Vihantiin'],
+    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
+    ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'], 
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
 ];
 
