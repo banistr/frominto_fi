@@ -101,6 +101,7 @@ const testdata = [
     ['Koivuhovi', 'Koivuhovista', 'Koivuhovissa', 'Koivuhoviin'],
     ['Nokia', 'Nokialta', 'Nokialla', 'Nokialle'],
     ['Vihanti', 'Vihantista', 'Vihantissa', 'Vihantiin'],
+    ['Järvenpää', 'Järvenpäästä', 'Järvenpäässä', 'Järvenpäähän'],
     ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
     ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'], 
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],

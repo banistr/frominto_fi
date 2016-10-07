@@ -73,7 +73,8 @@ const ruleset = [
     // järvet ja vedet
     [['järvi'], -1, 'eltä', 'ellä', 'elle' ],
     [['vesi'], -2, 'deltä', 'dellä', 'delle' ],
-
+    // genetiivinpää
+    [['npää'], 0, 'stä', 'ssä', 'hän'],
     //kosket ja salmet
     [['koski', 'salmi'], -1, 'elta', 'ella', 'elle' ],
     [['ore'], 0, 'elta', 'ella', 'elle' ],
