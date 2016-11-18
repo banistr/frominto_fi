@@ -60,6 +60,9 @@ const ruleset = [
     [['iä', 'kää', 'pää'], 0, 'ltä', 'llä', 'lle'],
 
     [['vik'], 0, 'istä', 'issä', 'iin'],
+    //mm. savio
+    [['vio'], 0, 'lta', 'lla', 'lle'],
+    
     //inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
     [['inen'], -4, 'isista', 'isissa', 'isiin' ],
     [['äinen', 'öinen'], -4, 'isistä', 'isissä', 'isiin' ],
@@ -96,7 +99,7 @@ const ruleset = [
     [['mäki'], -4, 'mäeltä', 'mäellä', 'mäelle' ],
     [['tunturi'], 0, 'lta', 'lla', 'lle' ],
     //erikoismäet
-    [['kannelmäki', 'pukinmäki'], -2, 'estä', 'essä', 'keen' ],
+    [['kannelmäki', 'pukinmäki', 'myyrmäki'], -2, 'estä', 'essä', 'keen' ],
     
     //asemat, hotellit ja muut
     [['asema'], 0, 'lta', 'lla', 'lle'],  
@@ -114,8 +117,12 @@ const ruleset = [
     //tuntureiden nimet
     [['Suomu', 'Ruka', 'Tahko', 'Luosto', 'Malmi'], 0, 'lta', 'lla', 'lle'],
     [['Levi', 'Pyhä'], 0, 'ltä', 'llä', 'lle'],
-    // totally weird cases
+
+    // totally weird cases & one-off hacks
     [['Kangasala'], -3, 'alta', 'alla', 'alle'],
+    // Helsinki Lentoasema, Turenki Lentoasema (if such exists)
+    [['nki Lentoasema'], -14, 'ngin Lentoasemalta', 'ngin Lentoasemalla', 'ngin Lentoasemalle'],
+    
 
 ];
 

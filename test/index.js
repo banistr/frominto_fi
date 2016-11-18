@@ -102,8 +102,15 @@ const testdata = [
     ['Nokia', 'Nokialta', 'Nokialla', 'Nokialle'],
     ['Vihanti', 'Vihantista', 'Vihantissa', 'Vihantiin'],
     ['Järvenpää', 'Järvenpäästä', 'Järvenpäässä', 'Järvenpäähän'],
+    ['Savio', 'Saviolta', 'Saviolla', 'Saviolle'],
+    ['Myyrmäki', 'Myyrmäestä', 'Myyrmäessä', 'Myyrmäkeen'],
+    //this is ugly, but Helsinki Lentoasema is really called Helsinki Lentoasema
+    ['Helsinki Lentoasema', 'Helsingin Lentoasemalta', 'Helsingin Lentoasemalla', 'Helsingin Lentoasemalle'],
+    
+    ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
     ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
-    ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'], 
+    ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
+
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
 ];
 
