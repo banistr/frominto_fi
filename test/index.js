@@ -112,7 +112,10 @@ const testdata = [
     'Helsingin Lentoasemalle',
   ],
 
-  ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
+  ['Turenki', 'Turengista', 'Turengissa', 'Turenkiin'],
+  ['Arolampi', 'Arolammista', 'Arolammissa', 'Arolammille'],
+  ['Leteensuo', 'Leteensuolta', 'Leteensuolla', 'Leteensuolle'],
+
   ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'],
   ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
 

@@ -59,7 +59,14 @@ const ruleset = [
   [['ii'], 0, 'stä', 'ssä', 'hin'],
   [['uu'], 0, 'sta', 'ssa', 'hun'],
   [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
-  [['maa', 'taa', 'ria', 'pua', 'uma', 'tra', 'ava', 'jaa', 'ruu', 'kia'], 0, 'lta', 'lla', 'lle'],
+
+  [
+    ['maa', 'taa', 'ria', 'pua', 'uma', 'tra', 'ava', 'jaa', 'ruu', 'kia', 'suo'],
+    0,
+    'lta',
+    'lla',
+    'lle',
+  ],
 
   [['iä', 'kää', 'pää'], 0, 'ltä', 'llä', 'lle'],
 
@@ -128,6 +135,10 @@ const ruleset = [
 
   // Helsinki Lentoasema, Turenki Lentoasema (if such exists)
   [['nki Lentoasema'], -14, 'ngin Lentoasemalta', 'ngin Lentoasemalla', 'ngin Lentoasemalle'],
+
+  [['Turenki'], -2, 'gista', 'gissa', 'kiin'],
+
+  [['lampi'], -2, 'mista', 'missa', 'mille'],
 ]
 
 function getLastMatch(city) {
