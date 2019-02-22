@@ -1,18 +1,31 @@
-# frominto_fi
+# frominto
 
-Finnish language is hard. We come from "Mäntyharju_lta_" or "Hiekkaharju_sta_". 
-We spend our time "Lahde_ssa_" or "Kesälahde_lla_". This is a first trial to make things better and to help with at least the common cities/places.
+Finnish language is hard. We come from "Mäntyharju**lta**" or "Hiekkaharju**sta**". 
+We spend our time "Lahde**ssa**" or "Kesälahde**lla**". This is a library to solve the difficulties with the conjugations!
 
-## Howto
-`npm install frominto_fi`
+## Usage
 
+```javascript
+import frominto from 'frominto'
 
-`var fitfi = require('frominto_fi');`
+frominto('Helsinki')
 
-`console.log(fitfi.to('Tampere'));`
-`console.log(fitfi.in('Kauniainen'));`
-`console.log(fitfi.from('Helsinki));`
+// Would return:
+
+{
+ "from": "Helsingistä",
+ "in": "Helsingissä",
+ "to": "Helsinkiin"
+}
+
+frominto('Kauniainen')
+frominto('Tampere')
+```
  
-## How to contribute
-1. Write a test case in test/index.js
-2. Write a rule in index.js in the appropriate line
+## Contributions
+
+Contributions are welcome and greatly appreciated!
+
+1. Write a test case in [`test/index.js`](test/index.js)
+2. Write a rule in [`index.js`]() in the appropriate line
+3. Make the pull request! :muscle:
