@@ -97,7 +97,7 @@ const testdata = [
   ['Varkaus', 'Varkaudesta', 'Varkaudessa', 'Varkauteen', 'Varkauden'],
   ['Koivuhovi', 'Koivuhovista', 'Koivuhovissa', 'Koivuhoviin', 'Koivuhovin'],
   ['Nokia', 'Nokialta', 'Nokialla', 'Nokialle', 'Nokian'],
-  ['Vihanti', 'Vihantista', 'Vihantissa', 'Vihantiin', 'Vihannin'],
+  ['Vihanti', 'Vihannilta', 'Vihannilla', 'Vihantiin', 'Vihannin'],
   ['Järvenpää', 'Järvenpäästä', 'Järvenpäässä', 'Järvenpäähän', 'Järvenpään'],
   ['Savio', 'Saviolta', 'Saviolla', 'Saviolle', 'Savion'],
   ['Myyrmäki', 'Myyrmäestä', 'Myyrmäessä', 'Myyrmäkeen', 'Myyrmäen'],

@@ -27,7 +27,10 @@ const ruleset = [
   [['by'], 0, 'stä', 'ssä', 'hyn', 'n'],
 
   // naantali et al
-  [['ali', 'oli', 'uli', 'nti', 'nni'], 0, 'sta', 'ssa', 'in', 'n'],
+  [['ali', 'oli', 'uli', 'nni'], 0, 'sta', 'ssa', 'in', 'n'],
+
+  // vihanti
+  [['nti'], -2, 'nilta', 'nilla', 'tiin', 'nin'],
 
   // -valta etc.
   [['lta'], -2, 'lasta', 'lassa', 'taan', 'lan'],
@@ -99,7 +102,7 @@ const ruleset = [
   [['ore'], 0, 'elta', 'ella', 'elle', 'en'],
 
   // saaret + erikoissaaret
-  [['saari'], -1, 'esta', 'essa', 'een'],
+  [['saari'], -1, 'esta', 'essa', 'een', 'en'],
 
   // lahdet + erikoislahdet
   [['lahti'], -2, 'desta', 'dessa', 'teen', 'den'],
