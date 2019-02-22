@@ -169,7 +169,7 @@ function getLastMatch(city) {
         to: city.slice(0, city.length + match[1]) + match[4],
         via: city.slice(0, city.length + match[1]) + match[5],
       }))
-      .pop() || { from: city, in: city, to: city }
+      .pop() || { from: city, in: city, to: city, via: city }
   )
 }
 
