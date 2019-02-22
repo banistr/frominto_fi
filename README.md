@@ -1,7 +1,9 @@
 # frominto
 
+[![Build Status](https://travis-ci.org/petja/frominto.svg?branch=master)](https://travis-ci.org/petja/frominto) ![npm](https://img.shields.io/npm/v/frominto.svg)
+
 Finnish language is hard. We come from "Mäntyharju**lta**" or "Hiekkaharju**sta**".
-We spend our time "Lahde**ssa**" or "Kesälahde**lla**". This is a library to solve the difficulties with the conjugations!
+We spend our time "Lahde**ssa**" or "Kesälahde**lla**". This library tries to solve the difficulties of the conjugations!
 
 ## Usage
 
@@ -15,16 +17,14 @@ frominto('Helsinki')
 {
  "from": "Helsingistä",
  "in": "Helsingissä",
- "to": "Helsinkiin"
+ "to": "Helsinkiin",
+ "via": "Helsingin"
 }
-
-frominto('Kauniainen')
-frominto('Tampere')
 ```
 
 ## Contributions
 
-Contributions are welcome and greatly appreciated!
+Contributions are welcome and greatly appreciated :relaxed:
 
 1. Write a test case in [`test/index.js`](test/index.js)
 2. Write a rule in [`index.ts`]() in the appropriate line
