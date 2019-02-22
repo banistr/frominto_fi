@@ -4,61 +4,60 @@
 */
 const ruleset = [
   // extremely stupid initial vowels
-  [['a'], 0, 'sta', 'ssa', 'an'],
-  [['e'], 0, 'stä', 'ssä', 'en'],
-  [['i'], 0, 'stä', 'ssä', 'in'],
-  [['o'], 0, 'sta', 'ssa', 'on'],
-  [['u'], 0, 'sta', 'ssa', 'un'],
-  [['y'], 0, 'stä', 'ssä', 'yn'],
-  [['ä'], 0, 'stä', 'ssä', 'än'],
-  [['ö'], 0, 'stä', 'ssä', 'ön'],
+  [['a'], 0, 'sta', 'ssa', 'an', 'n'],
+  [['e'], 0, 'stä', 'ssä', 'en', 'n'],
+  [['i'], 0, 'stä', 'ssä', 'in', 'n'],
+  [['o'], 0, 'sta', 'ssa', 'on', 'n'],
+  [['u'], 0, 'sta', 'ssa', 'un', 'n'],
+  [['y'], 0, 'stä', 'ssä', 'yn', 'n'],
+  [['ä'], 0, 'stä', 'ssä', 'än', 'n'],
+  [['ö'], 0, 'stä', 'ssä', 'ön', 'n'],
 
   // -ri -erityiset: pori, meri etc. + kajaani yms
-  [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in'],
-  [['meri', 'veri'], -1, 'essä', 'estä', 'ereen'],
+  [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in', 'n'],
+  [['meri', 'veri'], -1, 'essä', 'estä', 'ereen', 'en'],
 
   // s -päätteiset (Kannus, muhos, varkaus, karkaus)
-  [['s'], -1, 'ksesta', 'ksessa', 'kseen'],
-  [['Muhos'], -1, 'kselta', 'ksella', 'kselle'],
-
-  [['aus'], -1, 'desta', 'dessa', 'teen'],
-
-  [['as', 'es'], -1, 'ksesta', 'ksessa', 'kseen'],
+  [['s'], -1, 'ksesta', 'ksessa', 'kseen', 'ksen'],
+  [['Muhos'], -1, 'kselta', 'ksella', 'kselle', 'ksen'],
+  [['aus'], -1, 'desta', 'dessa', 'teen', 'den'],
+  [['as', 'es'], -1, 'ksesta', 'ksessa', 'kseen', 'ksen'],
 
   // xxby, like Degerby
-  [['by'], 0, 'stä', 'ssä', 'hyn'],
+  [['by'], 0, 'stä', 'ssä', 'hyn', 'n'],
 
   // naantali et al
-  [['ali', 'oli', 'uli', 'nti', 'nni'], 0, 'sta', 'ssa', 'in'],
+  [['ali', 'oli', 'uli', 'nti', 'nni'], 0, 'sta', 'ssa', 'in', 'n'],
 
   // -valta etc.
-  [['lta'], -2, 'lasta', 'lassa', 'taan'],
+  [['lta'], -2, 'lasta', 'lassa', 'taan', 'lan'],
 
   // -he, like Raahe
-  [['he'], 0, 'sta', 'ssa', 'en'],
+  [['he'], 0, 'sta', 'ssa', 'en', 'n'],
 
   // -kka
-  [['kka'], -2, 'asta', 'assa', 'kaan'],
-  [['kkä'], -2, 'ästä', 'ässä', 'kään'],
+  [['kka'], -2, 'asta', 'assa', 'kaan', 'an'],
+  [['kkä'], -2, 'ästä', 'ässä', 'kään', 'än'],
 
   // -nta, esim. maalaiskunta, lappeenranta
-  [['nta'], -2, 'nasta', 'nassa', 'taan'],
+  [['nta'], -2, 'nasta', 'nassa', 'taan', 'nan'],
 
   // helsinki, hanko, nta, nki etc.
-  [['nki'], -3, 'ngistä', 'ngissä', 'nkiin'],
-  [['nko'], -3, 'ngosta', 'ngossa', 'nkoon'],
+  [['nki'], -3, 'ngistä', 'ngissä', 'nkiin', 'ngin'],
+  [['nko'], -3, 'ngosta', 'ngossa', 'nkoon', 'ngon'],
 
   // tampere + kempele etc
-  [['pere'], 0, 'elta', 'ella', 'elle'],
-  [['pele'], 0, 'eltä', 'ellä', 'elle'],
+  [['pere'], 0, 'elta', 'ella', 'elle', 'en'],
+  [['pele'], 0, 'eltä', 'ellä', 'elle', 'en'],
 
-  [['rku', 'kku'], -2, 'usta', 'ussa', 'kuun'],
+  // turku, karkku
+  [['rku', 'kku'], -2, 'usta', 'ussa', 'kuun', 'un'],
 
   // ii, aa - päätteiset, kuten Ii, laukaa, vantaa, espoo
-  [['ee'], 0, 'ltä', 'llä', 'lle'],
-  [['ii'], 0, 'stä', 'ssä', 'hin'],
-  [['uu'], 0, 'sta', 'ssa', 'hun'],
-  [['aa', 'oo'], 0, 'sta', 'ssa', 'seen'],
+  [['ee'], 0, 'ltä', 'llä', 'lle', 'n'],
+  [['ii'], 0, 'stä', 'ssä', 'hin', 'n'],
+  [['uu'], 0, 'sta', 'ssa', 'hun', 'n'],
+  [['aa', 'oo'], 0, 'sta', 'ssa', 'seen', 'n'],
 
   [
     ['maa', 'taa', 'ria', 'pua', 'uma', 'tra', 'ava', 'jaa', 'ruu', 'kia', 'suo'],
@@ -66,79 +65,93 @@ const ruleset = [
     'lta',
     'lla',
     'lle',
+    'n',
   ],
 
-  [['iä', 'kää', 'pää'], 0, 'ltä', 'llä', 'lle'],
+  // hyvinkää
+  [['iä', 'kää', 'pää'], 0, 'ltä', 'llä', 'lle', 'n'],
 
-  [['vik'], 0, 'istä', 'issä', 'iin'],
+  [['vik'], 0, 'istä', 'issä', 'iin', 'in'],
 
   // mm. savio
-  [['vio'], 0, 'lta', 'lla', 'lle'],
+  [['vio'], 0, 'lta', 'lla', 'lle', 'n'],
 
   // inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
-  [['inen'], -4, 'isista', 'isissa', 'isiin'],
-  [['äinen', 'öinen'], -4, 'isistä', 'isissä', 'isiin'],
-  [['Joroinen'], -4, 'isilta', 'isilla', 'isille'],
+  [['inen'], -4, 'isista', 'isissa', 'isiin', 'isten'],
+  [['äinen', 'öinen'], -4, 'isistä', 'isissä', 'isiin', 'isten'],
+  [['Joroinen'], -4, 'isilta', 'isilla', 'isille', 'isten'],
 
   // harjut + erikoisharjut
-  [['harju'], 0, 'lta', 'lla', 'lle'],
-  [['hiekkaharju', 'uimaharju'], 0, 'sta', 'ssa', 'un'],
+  [['harju'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['hiekkaharju', 'uimaharju'], 0, 'sta', 'ssa', 'un', 'n'],
 
-  [['nummi'], -1, 'elta', 'ella', 'elle'],
+  [['nummi'], -1, 'elta', 'ella', 'elle', 'en'],
+
   // järvet ja vedet
-  [['järvi'], -1, 'eltä', 'ellä', 'elle'],
-  [['vesi'], -2, 'deltä', 'dellä', 'delle'],
+  [['järvi'], -1, 'eltä', 'ellä', 'elle', 'en'],
+  [['vesi'], -2, 'deltä', 'dellä', 'delle', 'den'],
+
   // genetiivinpää
-  [['npää'], 0, 'stä', 'ssä', 'hän'],
+  [['npää'], 0, 'stä', 'ssä', 'hän', 'n'],
+
   // kosket ja salmet
-  [['koski', 'salmi'], -1, 'elta', 'ella', 'elle'],
-  [['ore'], 0, 'elta', 'ella', 'elle'],
+  [['koski', 'salmi'], -1, 'elta', 'ella', 'elle', 'en'],
+  [['ore'], 0, 'elta', 'ella', 'elle', 'en'],
 
   // saaret + erikoissaaret
   [['saari'], -1, 'esta', 'essa', 'een'],
 
   // lahdet + erikoislahdet
-  [['lahti'], -2, 'desta', 'dessa', 'teen'],
-  [['kesälahti', 'talvilahti', 'lapinlahti'], -2, 'delta', 'della', 'delle'],
+  [['lahti'], -2, 'desta', 'dessa', 'teen', 'den'],
+  [['kesälahti', 'talvilahti', 'lapinlahti'], -2, 'delta', 'della', 'delle', 'den'],
 
   // vuoret + erikoisvuoret
-  [['vuori'], -1, 'elta', 'ella', 'elle'],
-  [['laajavuori', 'punavuori'], -1, 'esta', 'essa', 'een'],
+  [['vuori'], -1, 'elta', 'ella', 'elle', 'en'],
+  [['laajavuori', 'punavuori'], -1, 'esta', 'essa', 'een', 'en'],
+
   //joet
-  [['joki'], -4, 'joelta', 'joella', 'joelle'],
+  [['joki'], -4, 'joelta', 'joella', 'joelle', 'joen'],
 
   // mäet
-  [['mäki'], -4, 'mäeltä', 'mäellä', 'mäelle'],
-  [['tunturi'], 0, 'lta', 'lla', 'lle'],
+  [['mäki'], -4, 'mäeltä', 'mäellä', 'mäelle', 'mäen'],
+  [['tunturi'], 0, 'lta', 'lla', 'lle', 'n'],
+
   // erikoismäet
-  [['kannelmäki', 'pukinmäki', 'myyrmäki'], -2, 'estä', 'essä', 'keen'],
+  [['kannelmäki', 'pukinmäki', 'myyrmäki'], -2, 'estä', 'essä', 'keen', 'en'],
 
   // asemat, hotellit ja muut
-  [['asema'], 0, 'lta', 'lla', 'lle'],
-  [['otelli'], 0, 'sta', 'ssa', 'in'],
-  [['hovi'], 0, 'sta', 'ssa', 'in'],
+  [['asema'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['otelli'], 0, 'sta', 'ssa', 'in', 'n'],
+  [['hovi'], 0, 'sta', 'ssa', 'in', 'n'],
 
   // -selkä
-  [['selkä'], -2, 'ältä', 'ällä', 'älle'],
+  [['selkä'], -2, 'ältä', 'ällä', 'älle', 'än'],
 
   // -etti, tough one (taavetti, retretti)
-  [['tti'], -2, 'ista', 'issa', 'tiin'],
-  [['kki'], -2, 'ista', 'issa', 'kiin'],
-  [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin'],
+  [['tti'], -2, 'ista', 'issa', 'tiin', 'in'],
+  [['kki'], -2, 'ista', 'issa', 'kiin', 'in'],
+  [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin', 'in'],
 
   // tuntureiden nimet
-  [['Suomu', 'Ruka', 'Tahko', 'Luosto', 'Malmi'], 0, 'lta', 'lla', 'lle'],
-  [['Levi', 'Pyhä'], 0, 'ltä', 'llä', 'lle'],
+  [['Suomu', 'Ruka', 'Tahko', 'Luosto', 'Malmi'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['Levi', 'Pyhä'], 0, 'ltä', 'llä', 'lle', 'n'],
 
   // totally weird cases & one-off hacks
-  [['Kangasala'], -3, 'alta', 'alla', 'alle'],
+  [['Kangasala'], -3, 'alta', 'alla', 'alle', 'alan'],
 
   // Helsinki Lentoasema, Turenki Lentoasema (if such exists)
-  [['nki Lentoasema'], -14, 'ngin Lentoasemalta', 'ngin Lentoasemalla', 'ngin Lentoasemalle'],
+  [
+    ['nki Lentoasema'],
+    -14,
+    'ngin Lentoasemalta',
+    'ngin Lentoasemalla',
+    'ngin Lentoasemalle',
+    'ngin Lentoaseman',
+  ],
 
-  [['Turenki'], -2, 'gista', 'gissa', 'kiin'],
+  [['Turenki'], -2, 'gista', 'gissa', 'kiin', 'gin'],
 
-  [['lampi'], -2, 'mista', 'missa', 'mille'],
+  [['lampi'], -2, 'mista', 'missa', 'mille', 'min'],
 ]
 
 function getLastMatch(city) {
@@ -151,6 +164,7 @@ function getLastMatch(city) {
         from: city.slice(0, city.length + match[1]) + match[2],
         in: city.slice(0, city.length + match[1]) + match[3],
         to: city.slice(0, city.length + match[1]) + match[4],
+        via: city.slice(0, city.length + match[1]) + match[5],
       }))
       .pop() || { from: city, in: city, to: city }
   )
@@ -165,5 +179,8 @@ module.exports = {
   },
   to: function(city) {
     return getLastMatch(city).to
+  },
+  via: function(city) {
+    return getLastMatch(city).via
   },
 }
