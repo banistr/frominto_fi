@@ -1,5 +1,5 @@
-var assert = require('assert'),
-  fromto = require('../index')
+const assert = require('assert')
+const frominto = require('../dist/index').default
 
 const testdata = [
   ['Tampere', 'Tampereelta', 'Tampereella', 'Tampereelle', 'Tampereen'],
@@ -122,17 +122,19 @@ const testdata = [
 
 testdata.map(function(item) {
   describe(`*** ${item[0]} ***`, function() {
+    const conjugated = frominto(item[0])
+
     it(`From should be ${item[1]}`, function() {
-      assert.equal(fromto.from(item[0]), item[1])
+      assert.equal(conjugated.from, item[1])
     })
     it(`In should be ${item[2]}`, function() {
-      assert.equal(fromto.in(item[0]), item[2])
+      assert.equal(conjugated.in, item[2])
     })
     it(`To should be ${item[3]}`, function() {
-      assert.equal(fromto.to(item[0]), item[3])
+      assert.equal(conjugated.to, item[3])
     })
     it(`Via should be ${item[4]}`, function() {
-      assert.equal(fromto.via(item[0]), item[4])
+      assert.equal(conjugated.via, item[4])
     })
   })
 })

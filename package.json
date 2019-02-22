@@ -7,7 +7,7 @@
   "scripts": {
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "buld": "tsc",
+    "build": "tsc",
     "test": "node ./node_modules/mocha/bin/mocha test/index.js"
   },
   "devDependencies": {
