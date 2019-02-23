@@ -48,8 +48,8 @@ const ruleset: ConjugationRule[] = [
   [['ä'], 0, 'stä', 'ssä', 'än', 'n'],
   [['ö'], 0, 'stä', 'ssä', 'ön', 'n'],
 
-  // -ri -erityiset: pori, meri etc. + kajaani yms
-  [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in', 'n'],
+  // -ri -erityiset: pori, meri etc. + kajaani, olli yms
+  [['pori', 'uri', 'ari', 'ani', 'lli'], 0, 'sta', 'ssa', 'in', 'n'],
   [['meri', 'veri'], 1, 'essä', 'estä', 'ereen', 'en'],
 
   // s -päätteiset (Kannus, muhos, varkaus, karkaus)
@@ -62,7 +62,7 @@ const ruleset: ConjugationRule[] = [
   [['by'], 0, 'stä', 'ssä', 'hyn', 'n'],
 
   // naantali et al
-  [['ali', 'oli', 'uli', 'nni'], 0, 'sta', 'ssa', 'in', 'n'],
+  [['ali', 'oli', 'uli'], 0, 'sta', 'ssa', 'in', 'n'],
 
   // vihanti
   [['nti'], 2, 'nilta', 'nilla', 'tiin', 'nin'],
@@ -72,6 +72,9 @@ const ruleset: ConjugationRule[] = [
 
   // -he, like Raahe
   [['he'], 0, 'sta', 'ssa', 'en', 'n'],
+
+  // vesanka
+  [['ka'], 2, 'gasta', 'gassa', 'galle', 'gan'],
 
   // -kka
   [['kka'], 2, 'asta', 'assa', 'kaan', 'an'],
@@ -87,6 +90,9 @@ const ruleset: ConjugationRule[] = [
   // tampere + kempele etc
   [['pere'], 0, 'elta', 'ella', 'elle', 'en'],
   [['pele'], 0, 'eltä', 'ellä', 'elle', 'en'],
+
+  // taipale
+  [['pale'], 0, 'elta', 'ella', 'elle', 'en'],
 
   // turku, karkku
   [['rku', 'kku'], 2, 'usta', 'ussa', 'kuun', 'un'],
@@ -111,13 +117,22 @@ const ruleset: ConjugationRule[] = [
 
   [['vik'], 0, 'istä', 'issä', 'iin', 'in'],
 
-  // mm. savio
-  [['vio'], 0, 'lta', 'lla', 'lle', 'n'],
+  // mm. sukeva, savio
+  [['va', 'vio'], 0, 'lta', 'lla', 'lle', 'n'],
+
+  // kinahmi
+  [['mi'], 0, 'lta', 'lla', 'in', 'n'],
 
   // inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
   [['inen'], 4, 'isista', 'isissa', 'isiin', 'isten'],
   [['äinen', 'öinen'], 4, 'isistä', 'isissä', 'isiin', 'isten'],
   [['Joroinen'], 4, 'isilta', 'isilla', 'isille', 'isten'],
+
+  // tornio-itäinen
+  [['itäinen'], 3, 'sestä', 'sessä', 'seen', 'sen'],
+
+  // niemet
+  [['niemi'], 1, 'eltä', 'ellä', 'elle', 'en'],
 
   // harjut + erikoisharjut
   [['harju'], 0, 'lta', 'lla', 'lle', 'n'],
@@ -157,10 +172,9 @@ const ruleset: ConjugationRule[] = [
   // erikoismäet
   [['kannelmäki', 'pukinmäki', 'myyrmäki'], 2, 'estä', 'essä', 'keen', 'en'],
 
-  // asemat, hotellit ja muut
-  [['asema'], 0, 'lta', 'lla', 'lle', 'n'],
-  [['otelli'], 0, 'sta', 'ssa', 'in', 'n'],
-  [['hovi'], 0, 'sta', 'ssa', 'in', 'n'],
+  // rajat, asemat, hotellit ja muut
+  [['raja', 'asema'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['hovi', 'li'], 0, 'sta', 'ssa', 'in', 'n'],
 
   // -selkä
   [['selkä'], 2, 'ältä', 'ällä', 'älle', 'än'],
@@ -170,12 +184,31 @@ const ruleset: ConjugationRule[] = [
   [['kki'], 2, 'ista', 'issa', 'kiin', 'in'],
   [['retti', 'pirtti'], 2, 'istä', 'issä', 'tiin', 'in'],
 
+  // -ppi, -ppa
+  [['ppi'], 2, 'ista', 'issa', 'piin', 'in'],
+  [['ppa'], 2, 'asta', 'assa', 'paan', 'an'],
+
+  // mänttä
+  [['ttä'], 2, 'ästä', 'ässä', 'tään', 'än'],
+
+  // sisättö
+  [['ttö'], 2, 'östä', 'össä', 'töön', 'ön'],
+
   // tuntureiden nimet
   [['Suomu', 'Ruka', 'Tahko', 'Luosto', 'Malmi'], 0, 'lta', 'lla', 'lle', 'n'],
   [['Levi', 'Pyhä'], 0, 'ltä', 'llä', 'lle', 'n'],
 
   // totally weird cases & one-off hacks
   [['Kangasala'], 3, 'alta', 'alla', 'alle', 'alan'],
+
+  [
+    ['Pyhäkumpu erkanemisvaihde'],
+    18,
+    'mun erkanemisvaihteelta',
+    'mun erkanemisvaihteella',
+    'mun erkanemisvaihteelle',
+    'mun erkanemisvaihteen',
+  ],
 
   // Helsinki Lentoasema, Turenki Lentoasema (if such exists)
   [
@@ -188,28 +221,40 @@ const ruleset: ConjugationRule[] = [
   ],
 
   [['Turenki'], 2, 'gista', 'gissa', 'kiin', 'gin'],
+  [['Uusikaupunki'], 10, 'destakaupungista', 'dessakaupungissa', 'teenkaupunkiin', 'denkaupungin'],
+  [['Runni'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['Kinni'], 0, 'stä', 'ssä', 'in', 'n'],
 
   [['lampi'], 2, 'mista', 'missa', 'mille', 'min'],
+  [['korpi'], 2, 'vesta', 'vessa', 'peen', 'ven'],
+  [['kangas'], 3, 'kaalta', 'kaalla', 'kaalle', 'kaan'],
+  [['kytö'], 2, 'döstä', 'dössä', 'töön', 'dön'],
+  [['luoto'], 2, 'dosta', 'dossa', 'toon', 'don'],
+  [['pudas'], 3, 'taalta', 'taalla', 'taalle', 'taan'],
+  [['kumpu'], 2, 'musta', 'mussa', 'puun', 'mun'],
+  [['haka'], 4, 'haasta', 'haassa', 'hakaan', 'haan'],
+  [['lähde'], 2, 'teeltä', 'teellä', 'teelle', 'teen'],
+  [['mies'], 1, 'hestä', 'hessä', 'helle', 'hen'],
 ]
+
+const createFallback = (city: string): ConjugationOutput => ({
+  from: `kohteesta ${city}`,
+  in: `kohteessa ${city}`,
+  to: `kohteeseen ${city}`,
+  via: `kohteen ${city}`,
+})
+
+const createConjugation = (city: string) => (match: ConjugationRule): ConjugationOutput => ({
+  from: city.slice(0, city.length + -match[1]) + match[2],
+  in: city.slice(0, city.length + -match[1]) + match[3],
+  to: city.slice(0, city.length + -match[1]) + match[4],
+  via: city.slice(0, city.length + -match[1]) + match[5],
+})
 
 export default (city: string): ConjugationOutput =>
   ruleset
     .filter(
       rule => rule[0].filter(ending => city.toUpperCase().endsWith(ending.toUpperCase())).length
     )
-    .map(
-      match =>
-        ({
-          from: city.slice(0, city.length + -match[1]) + match[2],
-          in: city.slice(0, city.length + -match[1]) + match[3],
-          to: city.slice(0, city.length + -match[1]) + match[4],
-          via: city.slice(0, city.length + -match[1]) + match[5],
-        } as ConjugationOutput)
-    )
-    .pop() ||
-  ({
-    from: city,
-    in: city,
-    to: city,
-    via: city,
-  } as ConjugationOutput)
+    .map(createConjugation(city))
+    .pop() || createFallback(city)

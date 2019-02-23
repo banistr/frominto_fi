@@ -1,6 +1,6 @@
 {
   "name": "frominto",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "From/in/to/via onjugations for Finnish places",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

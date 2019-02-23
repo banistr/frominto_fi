@@ -79,7 +79,7 @@ const testdata = [
   ['Karjaa', 'Karjaalta', 'Karjaalla', 'Karjaalle', 'Karjaan'], // www.raasepori.fi
   ['Pukinmäki', 'Pukinmäestä', 'Pukinmäessä', 'Pukinmäkeen', 'Pukinmäen'], // www.raasepori.fi
   ['Dragsvik', 'Dragsvikistä', 'Dragsvikissä', 'Dragsvikiin', 'Dragsvikin'], // https://fi.wikipedia.org/wiki/Uudenmaan_prikaati
-  ['Runni', 'Runnista', 'Runnissa', 'Runniin', 'Runnin'],
+  ['Runni', 'Runnilta', 'Runnilla', 'Runnille', 'Runnin'],
   ['Keuruu', 'Keuruulta', 'Keuruulla', 'Keuruulle', 'Keuruun'],
   ['Pihlajavesi', 'Pihlajavedeltä', 'Pihlajavedellä', 'Pihlajavedelle', 'Pihlajaveden'],
   ['Saariselkä', 'Saariselältä', 'Saariselällä', 'Saariselälle', 'Saariselän'],
@@ -101,6 +101,38 @@ const testdata = [
   ['Järvenpää', 'Järvenpäästä', 'Järvenpäässä', 'Järvenpäähän', 'Järvenpään'],
   ['Savio', 'Saviolta', 'Saviolla', 'Saviolle', 'Savion'],
   ['Myyrmäki', 'Myyrmäestä', 'Myyrmäessä', 'Myyrmäkeen', 'Myyrmäen'],
+  ['Juurikorpi', 'Juurikorvesta', 'Juurikorvessa', 'Juurikorpeen', 'Juurikorven'],
+  ['Karhukangas', 'Karhukankaalta', 'Karhukankaalla', 'Karhukankaalle', 'Karhukankaan'],
+  ['Kinahmi', 'Kinahmilta', 'Kinahmilla', 'Kinahmiin', 'Kinahmin'],
+  ['Kinni', 'Kinnistä', 'Kinnissä', 'Kinniin', 'Kinnin'],
+  ['Kirkniemi', 'Kirkniemeltä', 'Kirkniemellä', 'Kirkniemelle', 'Kirkniemen'],
+  ['Kolppi', 'Kolpista', 'Kolpissa', 'Kolppiin', 'Kolpin'],
+  ['Larvakytö', 'Larvakydöstä', 'Larvakydössä', 'Larvakytöön', 'Larvakydön'],
+  ['Mänttä', 'Mäntästä', 'Mäntässä', 'Mänttään', 'Mäntän'],
+  ['Mäntyluoto', 'Mäntyluodosta', 'Mäntyluodossa', 'Mäntyluotoon', 'Mäntyluodon'],
+  ['Pihtipudas', 'Pihtiputaalta', 'Pihtiputaalla', 'Pihtiputaalle', 'Pihtiputaan'],
+  ['Pyhäkumpu', 'Pyhäkummusta', 'Pyhäkummussa', 'Pyhäkumpuun', 'Pyhäkummun'],
+  ['Riippa', 'Riipasta', 'Riipassa', 'Riippaan', 'Riipan'],
+  ['Rovaniemi', 'Rovaniemeltä', 'Rovaniemellä', 'Rovaniemelle', 'Rovaniemen'],
+  ['Sisättö', 'Sisätöstä', 'Sisätössä', 'Sisättöön', 'Sisätön'],
+  ['Sukeva', 'Sukevalta', 'Sukevalla', 'Sukevalle', 'Sukevan'],
+  ['Taipale', 'Taipaleelta', 'Taipaleella', 'Taipaleelle', 'Taipaleen'],
+  ['Torkkeli', 'Torkkelista', 'Torkkelissa', 'Torkkeliin', 'Torkkelin'],
+  ['Tornio-Itäinen', 'Tornio-Itäisestä', 'Tornio-Itäisessä', 'Tornio-Itäiseen', 'Tornio-Itäisen'],
+  ['Vesanka', 'Vesangasta', 'Vesangassa', 'Vesangalle', 'Vesangan'],
+  ['Villähde', 'Villähteeltä', 'Villähteellä', 'Villähteelle', 'Villähteen'],
+  ['Veromies', 'Veromiehestä', 'Veromiehessä', 'Veromiehelle', 'Veromiehen'],
+  ['Ylivalli', 'Ylivallista', 'Ylivallissa', 'Ylivalliin', 'Ylivallin'],
+
+  // http://www.kielitoimistonohjepankki.fi/ohje/359
+  [
+    'Uusikaupunki',
+    'Uudestakaupungista',
+    'Uudessakaupungissa',
+    'Uuteenkaupunkiin',
+    'Uudenkaupungin',
+  ],
+
   //this is ugly, but Helsinki Lentoasema is really called Helsinki Lentoasema
   [
     'Helsinki Lentoasema',
@@ -117,7 +149,7 @@ const testdata = [
   ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin', 'XY Motellin'],
   ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille', 'XY-Tunturin'],
 
-  ['XYZ', 'XYZ', 'XYZ', 'XYZ', 'XYZ'],
+  ['XYZ', 'kohteesta XYZ', 'kohteessa XYZ', 'kohteeseen XYZ', 'kohteen XYZ'],
 ]
 
 testdata.map(function(item) {
