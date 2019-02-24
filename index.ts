@@ -118,7 +118,7 @@ const ruleset: ConjugationRule[] = [
   [['vik'], 0, 'istä', 'issä', 'iin', 'in'],
 
   // mm. sukeva, savio
-  [['va', 'vio'], 0, 'lta', 'lla', 'lle', 'n'],
+  [['eva', 'vio'], 0, 'lta', 'lla', 'lle', 'n'],
 
   // kinahmi
   [['mi'], 0, 'lta', 'lla', 'in', 'n'],
@@ -220,6 +220,7 @@ const ruleset: ConjugationRule[] = [
     'ngin Lentoaseman',
   ],
 
+  [['Iisalmi'], 1, 'esta', 'essa', 'een', 'en'],
   [['Turenki'], 2, 'gista', 'gissa', 'kiin', 'gin'],
   [['Uusikaupunki'], 10, 'destakaupungista', 'dessakaupungissa', 'teenkaupunkiin', 'denkaupungin'],
   [['Runni'], 0, 'lta', 'lla', 'lle', 'n'],

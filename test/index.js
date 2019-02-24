@@ -123,6 +123,9 @@ const testdata = [
   ['Villähde', 'Villähteeltä', 'Villähteellä', 'Villähteelle', 'Villähteen'],
   ['Veromies', 'Veromiehestä', 'Veromiehessä', 'Veromiehelle', 'Veromiehen'],
   ['Ylivalli', 'Ylivallista', 'Ylivallissa', 'Ylivalliin', 'Ylivallin'],
+  ['Iisalmi', 'Iisalmesta', 'Iisalmessa', 'Iisalmeen', 'Iisalmen'],
+  ['Moskova', 'Moskovasta', 'Moskovassa', 'Moskovaan', 'Moskovan'],
+  ['Pietari', 'Pietarista', 'Pietarissa', 'Pietariin', 'Pietarin'],
 
   // http://www.kielitoimistonohjepankki.fi/ohje/359
   [
