@@ -74,7 +74,7 @@ const ruleset: ConjugationRule[] = [
   [['he'], 0, 'sta', 'ssa', 'en', 'n'],
 
   // vesanka
-  [['ka'], 2, 'gasta', 'gassa', 'galle', 'gan'],
+  [['nka'], 3, 'ngasta', 'ngassa', 'ngalle', 'ngan'],
 
   // -kka
   [['kka'], 2, 'asta', 'assa', 'kaan', 'an'],
@@ -225,6 +225,7 @@ const ruleset: ConjugationRule[] = [
   [['Uusikaupunki'], 10, 'destakaupungista', 'dessakaupungissa', 'teenkaupunkiin', 'denkaupungin'],
   [['Runni'], 0, 'lta', 'lla', 'lle', 'n'],
   [['Kinni'], 0, 'stä', 'ssä', 'in', 'n'],
+  [['Jokioinen'], 3, 'silta', 'silla', 'sille', 'sten'],
 
   [['lampi'], 2, 'mista', 'missa', 'mille', 'min'],
   [['korpi'], 2, 'vesta', 'vessa', 'peen', 'ven'],
@@ -236,6 +237,7 @@ const ruleset: ConjugationRule[] = [
   [['haka'], 4, 'haasta', 'haassa', 'hakaan', 'haan'],
   [['lähde'], 2, 'teeltä', 'teellä', 'teelle', 'teen'],
   [['mies'], 1, 'hestä', 'hessä', 'helle', 'hen'],
+  [['kulma'], 0, 'lta', 'lla', 'lle', 'n'],
 ]
 
 const createFallback = (city: string): ConjugationOutput => ({

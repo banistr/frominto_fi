@@ -126,6 +126,9 @@ const testdata = [
   ['Iisalmi', 'Iisalmesta', 'Iisalmessa', 'Iisalmeen', 'Iisalmen'],
   ['Moskova', 'Moskovasta', 'Moskovassa', 'Moskovaan', 'Moskovan'],
   ['Pietari', 'Pietarista', 'Pietarissa', 'Pietariin', 'Pietarin'],
+  ['Jokioinen', 'Jokioisilta', 'Jokioisilla', 'Jokioisille', 'Jokioisten'],
+  ['Puolimatka', 'Puolimatkasta', 'Puolimatkassa', 'Puolimatkaan', 'Puolimatkan'],
+  ['Myllynkulma', 'Myllynkulmalta', 'Myllynkulmalla', 'Myllynkulmalle', 'Myllynkulman'],
 
   // http://www.kielitoimistonohjepankki.fi/ohje/359
   [
