@@ -14,9 +14,10 @@ import frominto from 'frominto'
 
 frominto('Helsinki')
 
-// Would return:
+// Will return:
 
 {
+ "__self__": "Helsinki",
  "from": "Helsingistä",
  "in": "Helsingissä",
  "to": "Helsinkiin",

@@ -30,7 +30,8 @@ declare interface ConjugationRule {
   5: string
 }
 
-declare interface ConjugationOutput {
+export interface Conjugation {
+  __self__: string
   from: string
   in: string
   to: string
@@ -240,21 +241,23 @@ const ruleset: ConjugationRule[] = [
   [['kulma'], 0, 'lta', 'lla', 'lle', 'n'],
 ]
 
-const createFallback = (city: string): ConjugationOutput => ({
+const createFallback = (city: string): Conjugation => ({
+  __self__: city,
   from: `kohteesta ${city}`,
   in: `kohteessa ${city}`,
   to: `kohteeseen ${city}`,
   via: `kohteen ${city}`,
 })
 
-const createConjugation = (city: string) => (match: ConjugationRule): ConjugationOutput => ({
+const createConjugation = (city: string) => (match: ConjugationRule): Conjugation => ({
+  __self__: city,
   from: city.slice(0, city.length + -match[1]) + match[2],
   in: city.slice(0, city.length + -match[1]) + match[3],
   to: city.slice(0, city.length + -match[1]) + match[4],
   via: city.slice(0, city.length + -match[1]) + match[5],
 })
 
-export default (city: string): ConjugationOutput =>
+export default (city: string): Conjugation =>
   ruleset
     .filter(
       rule => rule[0].filter(ending => city.toUpperCase().endsWith(ending.toUpperCase())).length

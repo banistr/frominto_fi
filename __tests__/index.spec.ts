@@ -1,5 +1,4 @@
-const assert = require('assert')
-const frominto = require('../dist/index').default
+import frominto from '../index'
 
 const testdata = [
   ['Tampere', 'Tampereelta', 'Tampereella', 'Tampereelle', 'Tampereen'],
@@ -158,21 +157,13 @@ const testdata = [
   ['XYZ', 'kohteesta XYZ', 'kohteessa XYZ', 'kohteeseen XYZ', 'kohteen XYZ'],
 ]
 
-testdata.map(function(item) {
-  describe(`*** ${item[0]} ***`, function() {
+testdata.map(item => {
+  describe(`*** ${item[0]} ***`, () => {
     const conjugated = frominto(item[0])
 
-    it(`From should be ${item[1]}`, function() {
-      assert.equal(conjugated.from, item[1])
-    })
-    it(`In should be ${item[2]}`, function() {
-      assert.equal(conjugated.in, item[2])
-    })
-    it(`To should be ${item[3]}`, function() {
-      assert.equal(conjugated.to, item[3])
-    })
-    it(`Via should be ${item[4]}`, function() {
-      assert.equal(conjugated.via, item[4])
-    })
+    it(`From should be ${item[1]}`, () => expect(conjugated.from).toEqual(item[1]))
+    it(`In should be ${item[2]}`, () => expect(conjugated.in).toEqual(item[2]))
+    it(`To should be ${item[3]}`, () => expect(conjugated.to).toEqual(item[3]))
+    it(`Via should be ${item[4]}`, () => expect(conjugated.via).toEqual(item[4]))
   })
 })
