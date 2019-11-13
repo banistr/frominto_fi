@@ -1,15 +1,34 @@
 {
-  "name": "frominto_fi",
-  "version": "0.1.7",
-  "description": "This module implements 3 functions: from, in and to, returning the appropriate and correct forms in Finnish for the given city/place",
-  "main": "index.js",
+  "name": "frominto",
+  "version": "1.0.2",
+  "description": "From/in/to/via onjugations for Finnish places",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha test/index.js"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "build": "tsc",
+    "test": "jest"
   },
-  "author": "Antti Kosonen <antti.kosonen@futurice.com> (http://spiceprogram.org)",
-  "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
-  }
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.12",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.3.3333"
+  },
+  "author": {
+    "name": "Petja Touru",
+    "url": "https://petja.me"
+  },
+  "contributors": [
+    "Antti Kosonen <antti.kosonen@futurice.com> (http://spiceprogram.org)"
+  ],
+  "keywords": [
+    "finnish",
+    "finnish language",
+    "conjugations",
+    "finland"
+  ],
+  "license": "MIT"
 }

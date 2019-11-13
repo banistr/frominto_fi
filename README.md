@@ -1,18 +1,34 @@
-# frominto_fi
+# frominto
 
-Finnish language is hard. We come from "Mäntyharju_lta_" or "Hiekkaharju_sta_". 
-We spend our time "Lahde_ssa_" or "Kesälahde_lla_". This is a first trial to make things better and to help with at least the common cities/places.
+[![Build Status](https://travis-ci.org/petja/frominto.svg?branch=master)](https://travis-ci.org/petja/frominto) [![npm](https://img.shields.io/npm/v/frominto.svg)](https://www.npmjs.com/package/frominto)
 
-## Howto
-`npm install frominto_fi`
+🇫🇮 Finnish language is hard. We come from "Mäntyharju**lta**" or "Hiekkaharju**sta**".
+We spend our time "Lahde**ssa**" or "Kesälahde**lla**". This library features more than 90 conjugation rules (elative, inessive, illative and genitive cases), 132 automated tests and pinch of awesomeness ✨
 
+This project is based on the [work of Antti Kosonen](https://github.com/banistr/frominto_fi) which haven't updated since 2016. Many new features have been added in this fork!
 
-`var fitfi = require('frominto_fi');`
+## Usage
 
-`console.log(fitfi.to('Tampere'));`
-`console.log(fitfi.in('Kauniainen'));`
-`console.log(fitfi.from('Helsinki));`
- 
-## How to contribute
-1. Write a test case in test/index.js
-2. Write a rule in index.js in the appropriate line
+```javascript
+import frominto from 'frominto'
+
+frominto('Helsinki')
+
+// Will return:
+
+{
+ "__self__": "Helsinki",
+ "from": "Helsingistä",
+ "in": "Helsingissä",
+ "to": "Helsinkiin",
+ "via": "Helsingin"
+}
+```
+
+## Contributions
+
+Contributions are welcome and greatly appreciated ☺️
+
+1. Write a test case in [`test/index.js`](test/index.js)
+2. Write a rule in [`index.ts`](index.ts) in the appropriate line
+3. Make the pull request! 💪
