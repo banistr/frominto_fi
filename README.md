@@ -9,26 +9,28 @@ This project is based on the [work of Antti Kosonen](https://github.com/banistr/
 
 ## Usage
 
-```javascript
-import frominto from 'frominto'
+```typescript
+import { strictEqual } from 'assert/strict'
+import { From, In, To, Via, frominto } from 'frominto'
 
-frominto('Helsinki')
+// Method 1
+strictEqual(From('Helsinki'), 'Helsingistä')
+strictEqual(In('Helsinki'), 'Helsingissä')
+strictEqual(To('Helsinki'), 'Helsinkiin')
+strictEqual(Via('Helsinki'), 'Helsingin')
 
-// Will return:
-
-{
- "__self__": "Helsinki",
- "from": "Helsingistä",
- "in": "Helsingissä",
- "to": "Helsinkiin",
- "via": "Helsingin"
-}
+// Method 2
+const cityConjugations = frominto('Helsinki')
+strictEqual(cityConjugations.from, 'Helsingistä')
+strictEqual(cityConjugations.in, 'Helsingissä')
+strictEqual(cityConjugations.to, 'Helsinkiin')
+strictEqual(cityConjugations.via, 'Helsingin')
 ```
 
 ## Contributions
 
 Contributions are welcome and greatly appreciated ☺️
 
-1. Write a test case in [`test/index.js`](test/index.js)
+1. Write a test case in [`test/index.ts`](test/index.ts)
 2. Write a rule in [`index.ts`](index.ts) in the appropriate line
 3. Make the pull request! 💪

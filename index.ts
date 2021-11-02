@@ -1,5 +1,5 @@
-/* 
- The ruleset is an array of [[endings], offset, from, in, to] 
+/*
+ The ruleset is an array of [[endings], offset, from, in, to]
  where the MOST SIGNIFICANT MATCH is the latest.
 */
 
@@ -249,18 +249,27 @@ const createFallback = (city: string): Conjugation => ({
   via: `kohteen ${city}`,
 })
 
-const createConjugation = (city: string) => (match: ConjugationRule): Conjugation => ({
-  __self__: city,
-  from: city.slice(0, city.length + -match[1]) + match[2],
-  in: city.slice(0, city.length + -match[1]) + match[3],
-  to: city.slice(0, city.length + -match[1]) + match[4],
-  via: city.slice(0, city.length + -match[1]) + match[5],
-})
+const createConjugation = (city: string) => (match: ConjugationRule) => {
+  const prefix = city.slice(0, city.length - match[1])
 
-export default (city: string): Conjugation =>
+  return {
+    __self__: city,
+    from: `${prefix}${match[2]}`,
+    in: `${prefix}${match[3]}`,
+    to: `${prefix}${match[4]}`,
+    via: `${prefix}${match[5]}`,
+  }
+}
+
+export const frominto = (city: string): Conjugation =>
   ruleset
     .filter(
       rule => rule[0].filter(ending => city.toUpperCase().endsWith(ending.toUpperCase())).length
     )
     .map(createConjugation(city))
     .pop() || createFallback(city)
+
+export const From = (city: string) => frominto(city).from
+export const In = (city: string) => frominto(city).in
+export const To = (city: string) => frominto(city).to
+export const Via = (city: string) => frominto(city).via

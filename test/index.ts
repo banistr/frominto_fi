@@ -1,4 +1,5 @@
-import frominto from '../index'
+import { strictEqual } from 'assert/strict'
+import { frominto, From, In, To, Via } from '../index'
 
 const testdata = [
   ['Tampere', 'Tampereelta', 'Tampereella', 'Tampereelle', 'Tampereen'],
@@ -158,12 +159,18 @@ const testdata = [
 ]
 
 testdata.map(item => {
-  describe(`*** ${item[0]} ***`, () => {
-    const conjugated = frominto(item[0])
+  const [cityName, correctFrom, correctIn, correctTo, correctVia] = item
 
-    it(`From should be ${item[1]}`, () => expect(conjugated.from).toEqual(item[1]))
-    it(`In should be ${item[2]}`, () => expect(conjugated.in).toEqual(item[2]))
-    it(`To should be ${item[3]}`, () => expect(conjugated.to).toEqual(item[3]))
-    it(`Via should be ${item[4]}`, () => expect(conjugated.via).toEqual(item[4]))
+  describe(`*** ${cityName} ***`, () => {
+    it(`From("${cityName}") should be "${correctFrom}"`, () => strictEqual(From(cityName), correctFrom))
+    it(`In("${cityName}") should be "${correctIn}"`, () => strictEqual(In(cityName), correctIn))
+    it(`To("${cityName}") should be "${correctTo}"`, () => strictEqual(To(cityName), correctTo))
+    it(`Via("${cityName}") should be "${correctVia}"`, () => strictEqual(Via(cityName), correctVia))
+
+    const conjugated = frominto(cityName)
+    it(`frominto("${cityName}").from should be "${correctFrom}"`, () => strictEqual(conjugated.from, correctFrom))
+    it(`frominto("${cityName}").in should be "${correctIn}"`, () => strictEqual(conjugated.in, correctIn))
+    it(`frominto("${cityName}").to should be "${correctTo}"`, () => strictEqual(conjugated.to, correctTo))
+    it(`frominto("${cityName}").via should be "${correctVia}"`, () => strictEqual(conjugated.via, correctVia))
   })
 })
