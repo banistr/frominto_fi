@@ -1,6 +1,6 @@
 {
   "name": "frominto",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "From/in/to/via onjugations for Finnish places",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.68",
+    "@types/node": "^12.20.36",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.10"
   },
   "author": {
     "name": "Petja Touru",
