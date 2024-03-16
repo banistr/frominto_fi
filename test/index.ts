@@ -129,6 +129,10 @@ const testdata = [
   ['Jokioinen', 'Jokioisilta', 'Jokioisilla', 'Jokioisille', 'Jokioisten'],
   ['Puolimatka', 'Puolimatkasta', 'Puolimatkassa', 'Puolimatkaan', 'Puolimatkan'],
   ['Myllynkulma', 'Myllynkulmalta', 'Myllynkulmalla', 'Myllynkulmalle', 'Myllynkulman'],
+  ['Jämi', 'Jämiltä', 'Jämillä', 'Jämille', 'Jämin'],
+  ['Alavus', 'Alavudelta', 'Alavudella', 'Alavudelle', 'Alavuden'],
+  ['Kemi', 'Kemistä', 'Kemissä', 'Kemiin', 'Kemin'],
+  ['Gryttjom', 'Gryttjomista', 'Gryttjomissa', 'Gryttjomiin', 'Gryttjomin'],
 
   // http://www.kielitoimistonohjepankki.fi/ohje/359
   [
@@ -158,19 +162,24 @@ const testdata = [
   ['XYZ', 'kohteesta XYZ', 'kohteessa XYZ', 'kohteeseen XYZ', 'kohteen XYZ'],
 ]
 
-testdata.map(item => {
+testdata.map((item) => {
   const [cityName, correctFrom, correctIn, correctTo, correctVia] = item
 
   describe(`*** ${cityName} ***`, () => {
-    it(`From("${cityName}") should be "${correctFrom}"`, () => strictEqual(From(cityName), correctFrom))
+    it(`From("${cityName}") should be "${correctFrom}"`, () =>
+      strictEqual(From(cityName), correctFrom))
     it(`In("${cityName}") should be "${correctIn}"`, () => strictEqual(In(cityName), correctIn))
     it(`To("${cityName}") should be "${correctTo}"`, () => strictEqual(To(cityName), correctTo))
     it(`Via("${cityName}") should be "${correctVia}"`, () => strictEqual(Via(cityName), correctVia))
 
     const conjugated = frominto(cityName)
-    it(`frominto("${cityName}").from should be "${correctFrom}"`, () => strictEqual(conjugated.from, correctFrom))
-    it(`frominto("${cityName}").in should be "${correctIn}"`, () => strictEqual(conjugated.in, correctIn))
-    it(`frominto("${cityName}").to should be "${correctTo}"`, () => strictEqual(conjugated.to, correctTo))
-    it(`frominto("${cityName}").via should be "${correctVia}"`, () => strictEqual(conjugated.via, correctVia))
+    it(`frominto("${cityName}").from should be "${correctFrom}"`, () =>
+      strictEqual(conjugated.from, correctFrom))
+    it(`frominto("${cityName}").in should be "${correctIn}"`, () =>
+      strictEqual(conjugated.in, correctIn))
+    it(`frominto("${cityName}").to should be "${correctTo}"`, () =>
+      strictEqual(conjugated.to, correctTo))
+    it(`frominto("${cityName}").via should be "${correctVia}"`, () =>
+      strictEqual(conjugated.via, correctVia))
   })
 })

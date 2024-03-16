@@ -58,6 +58,7 @@ const ruleset: ConjugationRule[] = [
   [['Muhos'], 1, 'kselta', 'ksella', 'kselle', 'ksen'],
   [['aus'], 1, 'desta', 'dessa', 'teen', 'den'],
   [['as', 'es'], 1, 'ksesta', 'ksessa', 'kseen', 'ksen'],
+  [['vus'], 1, 'delta', 'della', 'delle', 'den'],
 
   // xxby, like Degerby
   [['by'], 0, 'stä', 'ssä', 'hyn', 'n'],
@@ -121,8 +122,10 @@ const ruleset: ConjugationRule[] = [
   // mm. sukeva, savio
   [['eva', 'vio'], 0, 'lta', 'lla', 'lle', 'n'],
 
-  // kinahmi
+  // -mi päätteiset
   [['mi'], 0, 'lta', 'lla', 'in', 'n'],
+  [['kemi'], 0, 'stä', 'ssä', 'in', 'n'],
+  [['jämi'], 0, 'ltä', 'llä', 'lle', 'n'],
 
   // inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
   [['inen'], 4, 'isista', 'isissa', 'isiin', 'isten'],
@@ -239,6 +242,11 @@ const ruleset: ConjugationRule[] = [
   [['lähde'], 2, 'teeltä', 'teellä', 'teelle', 'teen'],
   [['mies'], 1, 'hestä', 'hessä', 'helle', 'hen'],
   [['kulma'], 0, 'lta', 'lla', 'lle', 'n'],
+
+  // på svenska
+
+  // gryttjom
+  [['jom'], 0, 'ista', 'issa', 'iin', 'in'],
 ]
 
 const createFallback = (city: string): Conjugation => ({
@@ -264,7 +272,7 @@ const createConjugation = (city: string) => (match: ConjugationRule) => {
 export const frominto = (city: string): Conjugation =>
   ruleset
     .filter(
-      rule => rule[0].filter(ending => city.toUpperCase().endsWith(ending.toUpperCase())).length
+      (rule) => rule[0].filter((ending) => city.toUpperCase().endsWith(ending.toUpperCase())).length
     )
     .map(createConjugation(city))
     .pop() || createFallback(city)
