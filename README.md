@@ -1,6 +1,6 @@
 # frominto
 
-[![Build Status](https://travis-ci.org/petja/frominto.svg?branch=master)](https://travis-ci.org/petja/frominto) [![npm](https://img.shields.io/npm/v/frominto.svg)](https://www.npmjs.com/package/frominto)
+[![npm](https://img.shields.io/npm/v/frominto.svg)](https://www.npmjs.com/package/frominto)
 
 🇫🇮 Finnish language is hard. We come from "Mäntyharju**lta**" or "Hiekkaharju**sta**".
 We spend our time "Lahde**ssa**" or "Kesälahde**lla**". This library features more than 90 conjugation rules (elative, inessive, illative and genitive cases), 132 automated tests and pinch of awesomeness ✨
